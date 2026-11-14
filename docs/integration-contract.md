@@ -3,7 +3,23 @@
 **Status:** v0.2 — core decisions locked at kickoff
 **Owner:** whole team · **Change process:** open a PR, ping the affected owner(s) for review
 
-## Locked decisions
+## Current SP1 import scope (2026-10-24)
+
+The downloaded SP1 branch at commit `024fb75` contains amendment A1 dated
+2026-09-14. That upstream amendment records supervisor acceptance of Chinese
+or US demand data and supersedes the China-only demand restriction below.
+This local integration imports **Boulder, USA** demand; Palo Alto has not been
+imported here. The original kickoff decisions are retained below for history.
+
+Hourly CSV, UTC storage, kWh units and sibling metadata remain unchanged.
+SP4 displays the source timezone (`America/Denver`) by default and supports UTC
+and Asia/Shanghai. The existing CNY planner is a separate Chinese tariff example;
+it does not price the Boulder series. US tariffs, currency schema changes and
+SP2/SP5 cost integration remain separate work. See [import evidence](sp1-sp4-import.md).
+
+Upstream amendment: https://github.com/ade-starry/ev-charging-platform/blob/024fb75/docs/integration-contract.md
+
+## Original kickoff decisions (region/currency subject to amendment A1 above)
 
 | Decision | Value | Rationale |
 |---|---|---|

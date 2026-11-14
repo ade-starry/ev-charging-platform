@@ -1,0 +1,11 @@
+EV_ID,SOC,Status,Power_kW
+EV01,32,Charging,7.2
+EV02,67,Waiting,0
+EV03,45,Charging,11
+EV04,81,Waiting,0
+EV05,26,Charging,7.2
+EV06,54,Charging,11
+EV07,72,Waiting,0
+EV08,39,Charging,7.2
+EV09,61,Waiting,0
+EV10,48,Charging,11

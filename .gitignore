@@ -43,6 +43,8 @@ data/processed/*
 data/interim/*
 !data/interim/.gitkeep
 *.csv
+# Small fictional UI fixture, not a collected charging dataset.
+!subprojects/sp4-monitoring-dashboard/assets/demo_ev_snapshot.csv
 *.parquet
 *.h5
 *.feather

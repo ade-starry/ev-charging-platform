@@ -30,5 +30,5 @@ ruff>=0.1
 
 # --- SP4 only: uncomment if you build the dashboard with Dash/Streamlit ---
 # dash>=2.14
-# streamlit>=1.29
+streamlit>=1.49,<2
 # sqlalchemy>=2.0

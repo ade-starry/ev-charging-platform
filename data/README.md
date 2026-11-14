@@ -13,22 +13,24 @@ data/
 ## Rules
 
 1. **`raw/` is read-only.** Never overwrite. If a file is wrong, re-download it.
-2. **`processed/` obeys `docs/integration-contract.md`** — 1-hour resolution, UTC, CNY.
+2. **`processed/` obeys `docs/integration-contract.md`** — 1-hour resolution, UTC,
+   explicit units. Demand is measured in kWh; currency applies only to monetary outputs.
 3. Every dataset you bring in gets a row in the register below **in the same PR**.
-4. **All datasets must be China-specific** (locked at kickoff — the project targets the
-   Chinese market, so tariffs, carbon intensity, and charging behaviour must all be Chinese).
+4. **Record each dataset's region.** Upstream amendment A1 permits US demand data.
+   This import uses Boulder, USA; Chinese tariff examples must not be represented
+   as prices observed at these stations. See `docs/sp1-sp4-import.md`.
 
 ## Dataset register
 
 | Dataset | Owner (SP) | Source URL | Licence | Downloaded | Size | Notes |
 |---|---|---|---|---|---|---|
-| *(none yet — SP1 to start)* | | | | | | |
+| Boulder EV Charging Station Data | SP1 | [Municipal ArcGIS layer](https://services.arcgis.com/ePKBjXrBZ2vEEgWd/arcgis/rest/services/Electric_Vehicle_Charging_Station_Data/FeatureServer/0) | CC0 1.0 | 2026-10-23 UTC | 23,276,416 bytes; 148,136 sessions | Historical 2018–2023 observations; source timezone America/Denver; SHA-256 and derived outputs in `docs/sp1-sp4-import.md` |
 
 ---
 
-## Candidate datasets — China-specific
+## Original candidate datasets — China-specific
 
-> **Scope decision (supervisor-approved):** the kickoff email suggested ACN-Data (Caltech),
+> **Historical kickoff scope, superseded for SP1 by amendment A1:** the kickoff email suggested ACN-Data (Caltech),
 > Boulder Colorado, and UK National Grid data. Those are **superseded** — we use Chinese data,
 > and **Dr Ghias has confirmed this is acceptable**. The original suggestions are recorded here
 > only so the rationale stays documented if the question comes up again.
