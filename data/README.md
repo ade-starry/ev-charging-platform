@@ -31,9 +31,10 @@ data/
 ## Original candidate datasets — China-specific
 
 > **Historical kickoff scope, superseded for SP1 by amendment A1:** the kickoff email suggested ACN-Data (Caltech),
-> Boulder Colorado, and UK National Grid data. Those are **superseded** — we use Chinese data,
-> and **Dr Ghias has confirmed this is acceptable**. The original suggestions are recorded here
-> only so the rationale stays documented if the question comes up again.
+> Boulder Colorado, and UK National Grid data. The team decision (2026-09-14) is to run SP1 on the
+> official US municipal sources — Boulder as primary, Palo Alto as validation — and the supervisor
+> accepts either region. The original suggestions and the Chinese candidates are recorded here only
+> so the rationale stays documented if the question comes up again.
 
 ### EV charging demand (SP1)
 
