@@ -4,9 +4,10 @@
 project:
   name: "AI-Enabled Smart EV Charging and Energy Management Platform"
   supervisor: "Dr Amer Ghias"
-  # Display timezone for SP4 only. Calendar features, the local-hour pattern
-  # analysis and the forecast-origin anchor use each dataset's OWN timezone
-  # (datasets.yaml) — never this value. Storage is always UTC.
+  # Local timezone used by SP1 for dataset processing (local-hour patterns and
+  # the forecast-origin anchor); Boulder/Palo Alto datasets are America/Denver.
+  # Storage is always UTC. SP4 currently displays Asia/Shanghai for the Chinese
+  # tariff test fixtures; revisit when US tariffs are added.
   timezone_display: "America/Denver"
 
 data:
@@ -14,8 +15,8 @@ data:
   interim_dir: "data/interim"
   processed_dir: "data/processed"
   resolution: "1h"                    # LOCKED at kickoff
-  currency: "CNY"                     # see docs/integration-contract.md amendment A1
-  region: "CN"                        # datasets are China-specific
+  currency: "CNY"                     # SP4 test fixtures; final currency TBD, see contract amendment A1
+  region: "US"                        # official datasets are US municipal (Boulder primary, Palo Alto validation)
 
 # Sub-project 1 — demand forecasting
 sp1:
@@ -38,7 +39,7 @@ sp2:
 
 # Sub-project 3 — renewable-aware charging
 sp3:
-  solar_dataset: ""                   # China-specific: see data/README.md
+  solar_dataset: ""                   # TBD (US sources; see data/README.md)
 
 # Sub-project 4 — monitoring & visualisation
 sp4:
@@ -49,4 +50,4 @@ sp4:
 # Sub-project 5 — assessment
 sp5:
   baseline_scenario: "uncontrolled"
-  carbon_intensity_source: ""         # China-specific grid carbon intensity
+  carbon_intensity_source: ""         # TBD (US grid carbon intensity; see data/README.md)
